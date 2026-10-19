@@ -5,12 +5,13 @@
 ## 运行
 
 ```sh
-python3 -m venv .venv
+python3.11 -m venv .venv
 .venv/bin/pip install -r requirements.txt
-PYTHONHASHSEED=42 .venv/bin/python train.py 2>&1 | tee artifacts/training.log
+mkdir -p artifacts
+PYTHONHASHSEED=42 OPENBLAS_NUM_THREADS=1 .venv/bin/python train.py 2>&1 | tee artifacts/training.log
 ```
 
-首次运行前创建日志目录：`mkdir -p artifacts`。脚本自动下载并核验完整语料（100,000,000 bytes，MD5 `3bea1919949baf155f99411df5fada7e`）。数据来源：https://mattmahoney.net/dc/textdata.html ，下载：https://mattmahoney.net/dc/text8.zip 。
+环境：Python 3.11，依赖版本以 requirements.txt 为准。脚本自动下载并核验完整语料（100,000,000 bytes，MD5 `3bea1919949baf155f99411df5fada7e`）。数据来源：https://mattmahoney.net/dc/textdata.html ，下载：https://mattmahoney.net/dc/text8.zip 。
 
 ## 产物
 

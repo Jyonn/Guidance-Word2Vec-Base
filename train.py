@@ -12,6 +12,7 @@ import zipfile
 
 import gensim
 import numpy as np
+import scipy
 from gensim.models import Word2Vec
 from gensim.models.word2vec import Text8Corpus
 
@@ -66,7 +67,8 @@ def main():
     report = dict(dataset_url=URL, dataset_md5=digest, dataset_bytes=corpus.stat().st_size,
                   corpus_tokens=model.corpus_total_words, vocabulary_size=len(vectors),
                   config=config, training_seconds=round(time.time() - started, 2),
-                  gensim_version=gensim.__version__, python_version=platform.python_version(),
+                  gensim_version=gensim.__version__, numpy_version=np.__version__,
+                  scipy_version=scipy.__version__, python_version=platform.python_version(),
                   shape=list(vectors.vectors.shape), all_finite=True,
                   neighbors={word: vectors.most_similar(word, topn=5)
                              for word in ['king', 'computer', 'music']})

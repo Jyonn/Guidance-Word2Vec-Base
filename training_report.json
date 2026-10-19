@@ -1,0 +1,105 @@
+{
+  "dataset_url": "https://mattmahoney.net/dc/text8.zip",
+  "dataset_md5": "3bea1919949baf155f99411df5fada7e",
+  "dataset_bytes": 100000000,
+  "corpus_tokens": 17005207,
+  "vocabulary_size": 71290,
+  "config": {
+    "vector_size": 100,
+    "window": 5,
+    "min_count": 5,
+    "sg": 1,
+    "negative": 5,
+    "hs": 0,
+    "sample": 0.001,
+    "alpha": 0.025,
+    "min_alpha": 0.0001,
+    "epochs": 10,
+    "workers": 8,
+    "seed": 42
+  },
+  "training_seconds": 125.21,
+  "gensim_version": "4.3.3",
+  "python_version": "3.11.9",
+  "shape": [
+    71290,
+    100
+  ],
+  "all_finite": true,
+  "neighbors": {
+    "king": [
+      [
+        "valdemar",
+        0.7442185878753662
+      ],
+      [
+        "sweyn",
+        0.741886556148529
+      ],
+      [
+        "kings",
+        0.740678071975708
+      ],
+      [
+        "canute",
+        0.7404763102531433
+      ],
+      [
+        "prince",
+        0.7335397005081177
+      ]
+    ],
+    "computer": [
+      [
+        "computers",
+        0.8058601021766663
+      ],
+      [
+        "hardware",
+        0.7756867408752441
+      ],
+      [
+        "computing",
+        0.7579526901245117
+      ],
+      [
+        "hardwired",
+        0.7278925180435181
+      ],
+      [
+        "hypermedia",
+        0.7186039090156555
+      ]
+    ],
+    "music": [
+      [
+        "musical",
+        0.8151847720146179
+      ],
+      [
+        "jazz",
+        0.7892518043518066
+      ],
+      [
+        "dance",
+        0.7701571583747864
+      ],
+      [
+        "krautrock",
+        0.7654746174812317
+      ],
+      [
+        "electronica",
+        0.7627154588699341
+      ]
+    ]
+  },
+  "numpy_version": "1.26.4",
+  "scipy_version": "1.13.1",
+  "artifact_sha256": {
+    "text8-100d.bin": "db8f519100ba04f1262570db9719e52a5499b21fc7b352a54c4bea54ed286c0b",
+    "text8-100d.txt": "005ed82ce4ccf6c1334d77c4f28382649f27bd46d4492504d3f2d98c536396fe",
+    "word2vec.kv": "02c7039ce5c576f838b08986dda50e1480bd0995c5bb28fb3dec5269108210d4",
+    "word2vec.model": "66b1a3bc25791fa925611917201d5108c26f2eccdbc066257a124e43b6aaf6fa"
+  }
+}
